@@ -1,0 +1,5 @@
+include:
+  - board: nrfmicro/nrf52840
+    shield: sofle_left
+  - board: nrfmicro/nrf52840
+    shield: sofle_right
