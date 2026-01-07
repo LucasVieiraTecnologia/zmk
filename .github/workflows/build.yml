@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: zmkfirmware/zmk-build-arm:stable  # Corrigido para versão estável
+      image: zmkfirmware/zmk-build-arm:stable
     strategy:
       fail-fast: false
       matrix:
@@ -22,7 +22,7 @@ jobs:
       - name: Cache west modules
         uses: actions/cache@v4
         env:
-          cache-name: cache-zephyr-modules
+          cache-name: cache-zephyr-modules-RESET  # MUDANÇA AQUI PARA FORÇAR ATUALIZAÇÃO
         with:
           path: |
             modules/
